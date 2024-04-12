@@ -30,7 +30,7 @@ const Navbar = () => {
     <nav className={isAuthorized ? "navbarShow" : "navbarHide"}>
       <div className="container">
         <div className="logo">
-          <img src="/JobZee-logos__white.png" alt="logo" />
+          <img src="https://shorturl.at/nAOY6" style={{'height':110}} alt="logo" />
         </div>
         <ul className={!show ? "menu" : "show-menu menu"}>
           <li>
@@ -48,6 +48,11 @@ const Navbar = () => {
               {user && user.role === "Employer"
                 ? "APPLICANT'S APPLICATIONS"
                 : "MY APPLICATIONS"}
+            </Link>
+          </li>
+          <li>
+            <Link to={"/resume"} onClick={() => setShow(false)}>
+              RESUME
             </Link>
           </li>
           {user && user.role === "Employer" ? (
